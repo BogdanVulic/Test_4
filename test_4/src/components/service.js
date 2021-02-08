@@ -1,5 +1,8 @@
 import axios from 'axios';
 
-const URL = '';
+const URL = 'https://api.spacexdata.com/v4';
+const LAUNCHES = '/launches';
+const ROCKETS = '/rockets';
 
-export const getSomething = () => axios.get(URL);
+export const getLaunches = () => axios.get(`${URL}${LAUNCHES}`);
+export const getRockets = () => axios.get(`${URL}${ROCKETS}`);
